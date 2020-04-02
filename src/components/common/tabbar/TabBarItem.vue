@@ -19,7 +19,7 @@
       path: String,
       activeColor: {
         type: String,
-        default: 'deeppink'
+        default: 'red'
       }
     },
     computed: {
@@ -40,7 +40,7 @@
     },
     methods: {
       itemClick() {
-        //  console.log("itemClick");
+          console.log("itemClick");
         this.$router.replace(this.path).catch(err => {
         })
       }
