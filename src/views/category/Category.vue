@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper" ref="aaaa">
+    <h2>施工中...</h2>
     <ul class="content">
       <li>分类列表1</li>
       <li>分类列表2</li>
@@ -117,8 +118,15 @@
         scroll: null
       }
     },
+    //组件创建完后调用
     mounted() {
-      this.scroll = new BScroll(document.querySelector('wrapper'), {})
+      this.scroll = new BScroll(document.querySelector('.wrapper'), {
+        probeType:3,
+        pullUpLoad:true
+      })
+      this.scroll.on('scroll',(position)=>{
+        console.log(position);
+      })
     }
   }
 </script>

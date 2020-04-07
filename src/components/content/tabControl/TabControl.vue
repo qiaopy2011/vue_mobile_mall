@@ -15,7 +15,6 @@
         type: Array,
         default() {
           return []
-
         }
       }
     },
@@ -27,7 +26,7 @@
     methods: {
       itemClick(index) {
         this.currentIndex = index; //内部切换index
-        this.$emit('tabClick',index) //自定义事件，将点击事件传递到首页（子传父）
+        this.$emit('tabClick', index) //自定义事件，将点击事件传递到首页（子传父）
       }
     }
   }
@@ -41,7 +40,7 @@
     height: 40px;
     line-height: 40px;
     background-color: #fff;
-    z-index: 9;
+    /*z-index: 9;*/
 
   }
 
